@@ -10,7 +10,9 @@
   const counts = tables
     .map((table, index) => ({
       index: index + 1,
-      rows: table.querySelectorAll("tr.memberrow_neutral").length,
+      rows: Array.from(table.querySelectorAll("tr")).filter((row) =>
+        Array.from(row.classList).some((className) => className.startsWith("memberrow_"))
+      ).length,
     }))
     .filter((item) => item.rows > 0);
   const total = counts.reduce((sum, item) => sum + item.rows, 0);
@@ -45,7 +47,7 @@
   const close = document.createElement("button");
   close.type = "button";
   close.textContent = "x";
-  close.setAttribute("aria-label", "Stang RowCounter");
+  close.setAttribute("aria-label", "Stäng RowCounter");
   close.style.cssText = [
     "width:24px",
     "height:24px",
@@ -61,7 +63,7 @@
   header.append(title, close);
 
   const summary = document.createElement("div");
-  summary.textContent = `${total} rad(er) med class="memberrow_neutral"`;
+  summary.textContent = `${total} rad(er) där class börjar med "memberrow_"`;
 
   panel.append(header, summary);
 

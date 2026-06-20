@@ -2,7 +2,7 @@
 
 UTF-8 i alla textfiler.
 
-Skapa en bookmarklet som räknar antal rader med class = "memberrow_neutral".
+Skapa en bookmarklet som räknar antal rader där class börjar med "memberrow_".
 Visa inte tabeller med noll rader.
 
 Skapa en ett bokmärke med följande innehåll:
