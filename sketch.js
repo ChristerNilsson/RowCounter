@@ -9,7 +9,7 @@
   const tables = Array.from(document.querySelectorAll("table"));
   const counts = tables.map((table, index) => ({
     index: index + 1,
-    rows: table.querySelectorAll("tr").length,
+    rows: table.querySelectorAll("tr.memberrow_neutral").length,
   }));
   const total = counts.reduce((sum, item) => sum + item.rows, 0);
 
@@ -59,7 +59,7 @@
   header.append(title, close);
 
   const summary = document.createElement("div");
-  summary.textContent = `${tables.length} tabell(er), ${total} rad(er) totalt`;
+  summary.textContent = `${total} rad(er) med class="memberrow_neutral"`;
 
   panel.append(header, summary);
 
