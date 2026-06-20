@@ -7,10 +7,12 @@
   }
 
   const tables = Array.from(document.querySelectorAll("table"));
-  const counts = tables.map((table, index) => ({
-    index: index + 1,
-    rows: table.querySelectorAll("tr.memberrow_neutral").length,
-  }));
+  const counts = tables
+    .map((table, index) => ({
+      index: index + 1,
+      rows: table.querySelectorAll("tr.memberrow_neutral").length,
+    }))
+    .filter((item) => item.rows > 0);
   const total = counts.reduce((sum, item) => sum + item.rows, 0);
 
   const panel = document.createElement("div");
