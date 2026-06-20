@@ -1,6 +1,6 @@
 # RowCounter
 
-Bookmarklet som räknar antal rader i tabeller med class="js-sort-table" på aktuell sida.
+Bookmarklet som räknar antal rader i tabeller med class="js-sort-table" eller "greyproptable" på aktuell sida.
 Tabeller med noll rader visas inte i listan.
 
 Skapa ett bokmärke med följande innehåll:

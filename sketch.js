@@ -6,7 +6,7 @@
     existing.remove();
   }
 
-  const tables = Array.from(document.querySelectorAll("table.js-sort-table"));
+  const tables = Array.from(document.querySelectorAll("table.js-sort-table, table.greyproptable"));
   const counts = tables
     .map((table, index) => ({
       index: index + 1,
@@ -61,7 +61,7 @@
   header.append(title, close);
 
   const summary = document.createElement("div");
-  summary.textContent = `${total} rad(er) i tabeller med class="js-sort-table"`;
+  summary.textContent = `${total} rad(er) i tabeller med class="js-sort-table" eller "greyproptable"`;
 
   panel.append(header, summary);
 
