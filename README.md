@@ -1,7 +1,7 @@
 # RowCounter
 
-Bookmarklet som räknar antal rader där class börjar med "memberrow_" på aktuell sida.
-Tabeller med noll matchande rader visas inte i listan.
+Bookmarklet som räknar antal rader i tabeller med class="js-sort-table" på aktuell sida.
+Tabeller med noll rader visas inte i listan.
 
 Skapa ett bokmärke med följande innehåll:
 

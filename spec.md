@@ -2,7 +2,7 @@
 
 UTF-8 i alla textfiler.
 
-Skapa en bookmarklet som räknar antal rader där class börjar med "memberrow_".
+Skapa en bookmarklet som räknar antal rader i tabeller med class = "js-sort-table".
 Visa inte tabeller med noll rader.
 
 Skapa en ett bokmärke med följande innehåll:

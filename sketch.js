@@ -6,13 +6,11 @@
     existing.remove();
   }
 
-  const tables = Array.from(document.querySelectorAll("table"));
+  const tables = Array.from(document.querySelectorAll("table.js-sort-table"));
   const counts = tables
     .map((table, index) => ({
       index: index + 1,
-      rows: Array.from(table.querySelectorAll("tr")).filter((row) =>
-        Array.from(row.classList).some((className) => className.startsWith("memberrow_"))
-      ).length,
+      rows: table.querySelectorAll("tr").length,
     }))
     .filter((item) => item.rows > 0);
   const total = counts.reduce((sum, item) => sum + item.rows, 0);
@@ -63,7 +61,7 @@
   header.append(title, close);
 
   const summary = document.createElement("div");
-  summary.textContent = `${total} rad(er) där class börjar med "memberrow_"`;
+  summary.textContent = `${total} rad(er) i tabeller med class="js-sort-table"`;
 
   panel.append(header, summary);
 
