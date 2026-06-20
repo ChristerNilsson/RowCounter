@@ -3,6 +3,7 @@
 UTF-8 i alla textfiler.
 
 Skapa en bookmarklet som räknar antal rader i tabeller med class = "js-sort-table" eller "greyproptable".
+Räkna inte rubrikraden.
 Visa inte tabeller med noll rader.
 
 Skapa en ett bokmärke med följande innehåll:

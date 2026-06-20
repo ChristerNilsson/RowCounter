@@ -10,7 +10,7 @@
   const counts = tables
     .map((table, index) => ({
       index: index + 1,
-      rows: table.querySelectorAll("tr").length,
+      rows: Math.max(0, table.querySelectorAll("tr").length - 1),
     }))
     .filter((item) => item.rows > 0);
   const total = counts.reduce((sum, item) => sum + item.rows, 0);
@@ -61,7 +61,7 @@
   header.append(title, close);
 
   const summary = document.createElement("div");
-  summary.textContent = `${total} rad(er) i tabeller med class="js-sort-table" eller "greyproptable"`;
+  summary.textContent = `${total} rad(er) utan rubrikrad i tabeller med class="js-sort-table" eller "greyproptable"`;
 
   panel.append(header, summary);
 
